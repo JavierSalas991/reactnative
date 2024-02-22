@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native-web';
+import { View, Text } from 'react-native';
+import Constants from 'expo-constants'
+import RepositoryList from './RepositoryList';
+
 
 const Main = () => {
+
     return (
-        <View>
-            <Text>Texto ejemplo</Text>
+        <View style={{marginTop: Constants.statusBarHeight, flexGrow: 1}}>
+            <Text>Titulo</Text>
+            <RepositoryList></RepositoryList>
         </View>
     );
 };
