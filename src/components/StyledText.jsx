@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
     colorSecondary: { color: theme.colors.textSecondary },
     textAlignCenter: {
         textAlign: "center"
-    }
+    },
+    alignCenter: {textAlign: "center"}
 
 })
 
@@ -31,7 +32,7 @@ export default function StyledText(props) {
     )
 
     return (
-        <Text style={textStyles} props>
+        <Text style={textStyles} {...props}>
             {props.children}
         </Text>
     )

@@ -1,6 +1,8 @@
+light= true
+
 const theme = {
     colors: {
-        textPrimary: "#1C2833",
+        textPrimary: light? "#1C2833" : "",
         textSecondary: "#E67E22",
         primary: "#2E86C1"
     },
@@ -14,6 +16,10 @@ const theme = {
     fontWeights: {
         normal: "400",
         bold: "700"
+    },
+    appBar: {
+        primary: "#24292e",
+        textPrimary: "#fff",
     }
 }
 export default theme

@@ -2,15 +2,35 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import StyledText from './StyledText';
 
+// const parseThousands = value => {
+//     return value >= 1000 ?
+//     `${Match.round(value/100) / 10}k`
+//     :
+//     String(value)
+// }
+
 const RepositoryItem = ({ repo }) => {
 
-    const RepositoryStats = ({repo}) => {
+
+    const RepositoryStats = ({ repo }) => {
         return (
-            <View>
-                <StyledText colorPrimary >language: {repo.language}</StyledText>
-                <StyledText colorPrimary >forksCount: {repo.forksCount}</StyledText>
-                <StyledText colorPrimary >reviesCount: {repo.reviesCount}</StyledText>
-                <StyledText colorSecondary >ratingAverage: {repo.ratingAverage}</StyledText>
+            <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+                <View>
+                    <StyledText alignCenter colorPrimary bold >language</StyledText>
+                    <StyledText alignCenter colorPrimary >{repo.language}</StyledText>
+                </View>
+                <View>
+                    <StyledText alignCenter colorPrimary bold >forksCount</StyledText>
+                    <StyledText alignCenter colorPrimary >{repo.forksCount}</StyledText>
+                </View>
+                <View>
+                    <StyledText alignCenter colorPrimary bold >reviesCount</StyledText>
+                    <StyledText alignCenter colorPrimary >{repo.reviesCount}</StyledText>
+                </View>
+                <View>
+                    <StyledText alignCenter colorSecondary bold >ratingAverage</StyledText>
+                    <StyledText alignCenter colorSecondary >{repo.ratingAverage}</StyledText>
+                </View>
             </View>
         )
     }
@@ -20,7 +40,7 @@ const RepositoryItem = ({ repo }) => {
         <View key={repo.id} style={styles.container}>
             <StyledText bold subheading >fullName: {repo.fullName}</StyledText>
             <StyledText bold >description: {repo.description}</StyledText>
-            <RepositoryStats repo></RepositoryStats>
+            <RepositoryStats repo={repo}></RepositoryStats>
         </View>
     );
 };
