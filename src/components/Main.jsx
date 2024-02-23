@@ -6,7 +6,6 @@ import AppBar from './AppBar';
 
 
 const Main = () => {
-
     return (
         <View style={{  flexGrow: 1}}>
             <AppBar></AppBar>
