@@ -4,6 +4,7 @@ import Constants from 'expo-constants'
 import RepositoryList from './RepositoryList';
 import AppBar from './AppBar';
 import { Route, Routes } from 'react-router-native';
+import Login from './pages/Login';
 
 
 const Main = () => {
@@ -12,7 +13,7 @@ const Main = () => {
             <AppBar></AppBar>
             <Routes>
                 <Route path="/" element={<RepositoryList />} exact/>
-                <Route path="/signin" element={<Text>Hola</Text>} exact/>
+                <Route path="/login" element={<Login/>} exact/>
             </Routes>
         </View>
     );

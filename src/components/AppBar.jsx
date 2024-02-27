@@ -32,7 +32,7 @@ const AppBar = () => {
         <View style={styles.container}>
             <ScrollView horizontal>
                 <AppBarTab to="/">Repositories</AppBarTab>
-                <AppBarTab to="/signin">Sign in</AppBarTab>
+                <AppBarTab to="/login">Login</AppBarTab>
 
             </ScrollView>
         </View>
